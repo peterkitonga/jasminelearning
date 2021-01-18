@@ -1,6 +1,6 @@
 /**
  * A suite in jasmine is a group of specs that we define to
- * test a give block of JavaScript code.
+ * test a given block of JavaScript code.
  * 
  * To disable a suite, we use the xdescribe() function which inturn 
  * disables all the specs under it.
