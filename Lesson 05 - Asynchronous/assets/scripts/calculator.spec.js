@@ -219,7 +219,7 @@ describe('calculator.js', () => {
              * The async callback lets jasmine know this is an asynchronous spec and this allows us to use the
              * 'await' keyword which will wait for the version Promise to resolve
             */
-            it('fetches version from external source', async (done) => {
+            it('fetches version from external source', async () => {
                 /**
                  * We can also install a spy on the fetch method used for the asynchronous request
                  * Here, we return a value that is a resolved promise with a response that contains the
@@ -239,8 +239,11 @@ describe('calculator.js', () => {
 
                 expect(version).toBe('0.1');
 
-                done();
-                
+                /**
+                 * In newer versions of jasmine, we don't need to pass the
+                 * done callback when using an async function for the spec
+                */
+                // done();
             });
         });
     });
